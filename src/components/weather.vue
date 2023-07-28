@@ -4,6 +4,7 @@
         <div class="card main-div w-100">
             <div class="p-3">
                 <div class="p-3">
+
                     <h3 class="mb-1 day">Monday</h3>
                     <p class="text-light date mb-0">Date</p>
                     <small>Time</small>
@@ -33,6 +34,9 @@
                 </tr>
             </tbody>
         </table>
+
+        <Daysweather></Daysweather>
+
         <div id="div_Form" class="d-flex m-3 justify-content-center">
             <form action="">
                 <input type="vutton" value="Change Location" class="btn change-btn btn-primary">
@@ -42,23 +46,18 @@
    </div>
   </template>
   
+
   <script>
+
+  import Daysweather from './Daysweather.vue'
+
   export default {
     name: "myWeather",
-    components: {},
-    data() {
-      return {
-        city:"",
-        showWeather:false,
-      }
+    components: {
+        Daysweather,
     },
-    methods: {
-      async searchWeather(){
-        this.showWeather=false;
-        await this.$nextTick();
-        this.showWeather=true;
-      }
-    },
+    
+    
   };
   </script>
   
